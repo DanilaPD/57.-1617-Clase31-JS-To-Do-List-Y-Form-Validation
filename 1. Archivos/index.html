@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- Css propio -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Formulario de alumno</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Crear cuenta de alumno:</h1>
+      <form action="" class="form" id="form">
+        <!-- Podemos validar desde JS y desde HTML. -->
+        <!-- https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation -->
+        <div class="form-control">
+          <label for="">
+            Nombre de usuario
+
+            <!-- Podríamos poner un "required", pero, si alguien nos modifica el HTML con F12, va a dejarnos hacer "submit" igual. Entonces, lo vamos a validar por JS. -->
+            <input type="text" name="" id="username" placeholder="Juan Pérez" />
+            <i class="fas fa-check-circle success"></i>
+            <i class="fas fa-exclamation-circle error"></i>
+            <small></small>
+          </label>
+        </div>
+
+        <div class="form-control">
+          <label for="">
+            Email
+            <input
+              type="text"
+              name=""
+              id="email"
+              placeholder="juan@perez.com"
+            />
+            <i class="fas fa-check-circle success"></i>
+            <i class="fas fa-exclamation-circle error"></i>
+            <small></small>
+          </label>
+        </div>
+
+        <div class="form-control">
+          Varita
+          <!-- ¿Qué pasa si queremos que no tenga nada elegido por defecto? ¡JS! -->
+          <select name="wand" id="wand">
+            <option value="madera de tejo">Madera de tejo</option>
+            <option value="pelo de unicornio">Pelo de unicornio</option>
+            <option value="vid">Vid</option>
+            <option value="acebo con pluma de fenix">
+              Acebo con pluma de fénix
+            </option>
+            <option value="otra">Otra</option>
+          </select>
+          <i class="fas fa-check-circle success"></i>
+          <i class="fas fa-exclamation-circle error"></i>
+          <small></small>
+        </div>
+
+        <div class="form-control">
+          <label for="">
+            Password
+            <input type="password" name="" id="pass1" placeholder="*****" />
+            <i class="fas fa-check-circle success"></i>
+            <i class="fas fa-exclamation-circle error"></i>
+            <small></small>
+          </label>
+        </div>
+
+        <div class="form-control">
+          <label for="">
+            Repita su password
+            <input type="password" name="" id="pass2" placeholder="*****" />
+            <i class="fas fa-check-circle success"></i>
+            <i class="fas fa-exclamation-circle error"></i>
+            <small></small>
+          </label>
+        </div>
+
+        <button class="btn">¡Enviar!</button>
+      </form>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
